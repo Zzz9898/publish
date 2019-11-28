@@ -1,0 +1,66 @@
+初始化项目
+
+
+reset.css 重置样式文件，使不同端打开显示效果差不多
+border.css 不同大小像素手机不一样，使用解决方案
+安装fastclick
+  项目目录下
+  npm install fastclick --save
+  项目main.js下
+  import fastClick from 'fastclick'
+  fastClick.attach(document.body)
+
+安装stylus和stylus-loader
+  npm install stylus --save
+  npm install stylus-loader --save
+
+stylus在sublime中改变颜色
+  直接ctrl+shift+p输入pin回车输入stylus
+
+vue在sublime中改变颜色
+1. 按 Ctrl+Shift+P
+2. 输入install，选择install Package
+3. 输入vue，选择 vue syntax hightlight 
+
+代码格式化
+1. 按 Ctrl+Shift+P
+2. 输入install，选择install Package
+3. 输入prettify，选择HTML-CSS-JS Prettify
+4. Ctrl+Alt+H进行格式化
+
+设置tab与space
+1. 打开Preferences — settings – 右边添加上 "draw_white_space":"all" 文本中就会出现 横线或者小点
+2. 选中文本右下角 Spaces 或 Tab Size 点击一下选择 convert indentation to Spaces 或者 convert indentation to Tabs ，混合的横线和点会全部变成点或者是横线。
+
+代码提示
+1. 按 Ctrl+Shift+P
+2. 输入install，选择install Package
+3. 输入sublimecodeintel，点击安装
+
+定义*.styl文件，存放全局变量
+例：varibles.styl
+$bgColor = #00bcd4
+在<style></style>中引用
+@import '~@/assets/style/varibles.styl' 后面的是指路径，@符号代表src目录，在样式文件中引用需要加~
+
+定义别名
+修改build目录下的webpack.base.conf.js文件，找到resolve，添加
+'styles': resolve('src/assets/styles')
+这样后面的路径就可以用styles代替了
+
+安装轮播插件，选择2.6.7版本
+npm install vue-awesome-swiper@2.6.7 --save
+全局使用，main.js引入
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+使用
+Vue.use(VueAwesomeSwiper)
+
+安装浏览器插件
+vue devtools
+
+border.css 解决方案使用
+在class中加入border-bottom
+
+安装axios发送ajax请求
+npm install axios --save
